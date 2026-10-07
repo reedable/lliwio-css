@@ -1,0 +1,7 @@
+.lliwio.hc-only {
+  display: none;
+
+  @media (prefers-contrast: more) {
+    display: inherit;
+  }
+}

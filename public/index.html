@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="lliwio viewport">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography Sample</title>
+  <link rel="stylesheet" href="./index.css">
+  <!-- <script type="module" src="./scripts/index.js"></script> -->
+
+  <noscript>
+    <style>
+      .control-panel {
+        display: none;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <a href="#main" class="lliwio sr-only">Go to main content</a>
+
+  <div class="container">
+
+    <div class="content">
+
+      <noscript>
+        <section aria-label="banner">
+          <div role="alert">
+            Control panel is disabled while JavaScript is disabled.
+          </div>
+        </section>
+      </noscript>
+
+      <main id="main" tabindex="-1" class="lliwio vertical-grid">
+
+        <h1>Lorem ipsum dolor sit amet</h1>
+
+        <p><q cite="https://www.lipsum.com">Consectetur adipiscing elit.</q></p>
+
+        <figure class="figure1">
+          <dl>
+            <dt>Link</dt>
+            <dd>
+              <a href="#active">Nunc quis ligula nisi</a>
+            </dd>
+            <dt>Visited link</dt>
+            <dd>
+              <a href="#visited">Nunc quis ligula nisi</a>
+            </dd>
+            <dt>Disabled link</dt>
+            <dd>
+              <a aria-disabled="true">Nunc quis ligula nisi
+                <span class="lliwio hc-only" aria-hidden="true">(disabled link)</span>
+              </a>
+            </dd>
+          </dl>
+
+          <figcaption>
+            <p>Hyperlink <code>&lt;a&gt;</code> are styled differently per browser state.</p>
+          </figcaption>
+        </figure>
+
+        <figure id="figure2">
+          <a id="figure2__ul--start" class="lliwio sr-only" href="#figure2__ul--end">Go to the bottom of the list</a>
+          <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+          </ul>
+          <a id="figure2__ul--end" class="lliwio sr-only" href="#figure2__ul--start">Go back to top</a>
+        </figure>
+
+        <p>
+          Vivamus ut egestas libero, vitae vulputate ipsum. Donec ut finibus lorem. Donec mollis
+          libero ac aliquam iaculis. <a href="#active"> Quisque magna est</a>, imperdiet a dolor ut,
+          facilisis semper lacus. Nunc turpis velit, congue ac vulputate ullamcorper, hendrerit nec
+          mi. Morbi dui dui, imperdiet dictum vulputate sed, consequat eget mi. Nunc quis ligula
+          nisi. <a aria-disabled="true">Duis ex purus</a>, elementum a cursus ut, iaculis ac ante.
+          Aenean sit amet ornare leo. Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus.
+        </p>
+
+        <details>
+          <summary>
+            <h2>Disclosure pattern</h2>
+          </summary>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel tortor ut magna gravida
+            convallis cursus non lectus. Nunc ut semper massa, quis eleifend ex. Praesent eu aliquet magna,
+            at volutpat elit. Donec venenatis, enim nec laoreet eleifend, elit enim consequat ipsum, sit amet
+            accumsan ligula enim eget turpis. Nunc vel turpis pellentesque, sollicitudin diam sed, feugiat
+            urna. In ac consequat sem. Phasellus malesuada, metus ac euismod tristique, metus elit molestie
+            ante, et consectetur justo diam eget nulla. Suspendisse potenti. Fusce maximus rhoncus viverra.
+            Nunc egestas ante eu gravida porttitor. Vestibulum suscipit lacus sit amet elit porttitor pretium.
+            Cras quam felis, luctus eget velit non, fermentum sagittis nulla. Phasellus eu dui luctus,
+            tincidunt arcu et, sollicitudin augue.
+          </p>
+        </details>
+
+        <p>
+          You can apply <span class="lliwio monospace">monospace font in a paragraph</span> for purely
+          visual effects using <code>&lt;span&gt;</code>.
+        </p>
+
+        <p>
+          <code>lliwio-css</code> by default sets paragraph to a platform provided sans-serif. If
+          you choose to override this behavior by either providing your own font or choosing to
+          assign serif font, this may introduce a visual imbalance for <code>.monospace</code> and
+          <code>&lt;code&gt;</code> within paragraphs. Be sure to adjust both
+          <code>.monospace</code> and <code>&lt;code&gt;</code> styles in your own CSS, for example:
+        </p>
+
+        <pre><code>body {
+  font-family: var(--qx-typography__font-family--serif);
+}
+
+code,
+samp,
+.monospace {
+  font-size: 0.75em;
+}</code></pre>
+
+        <h2>Vestibulum ut vestibulum leo, at bibendum sapien</h2>
+
+        <p>
+          Etiam eget euismod sem. Aenean imperdiet sagittis purus, id dapibus augue ornare
+          consectetur. Suspendisse ut feugiat eros. Aenean ipsum tortor, pharetra ultricies erat
+          non, efficitur finibus nulla. Nulla dapibus erat eu sem sagittis elementum. Sed laoreet
+          convallis justo eget gravida. Praesent id tortor convallis dolor euismod blandit. Sed
+          consectetur augue mi, ut suscipit odio aliquam eget.
+        </p>
+
+        <blockquote cite="Citation marker goes here">
+          <p>
+            Nam ac velit justo. Mauris pulvinar justo vitae tempus sodales. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Vivamus eu viverra nunc.
+          </p>
+          <p>
+            Duis ullamcorper lorem id nisl hendrerit, id iaculis nunc suscipit. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ac
+            lacus lorem. Ut at dolor eleifend tellus semper sollicitudin.
+          </p>
+        </blockquote>
+
+        <p>
+          Sed non interdum lorem. Donec condimentum risus sit amet euismod tincidunt. Ut et mollis
+          orci. Fusce ut malesuada quam. Pellentesque eget congue mauris, sit amet efficitur lorem.
+          Duis tempor, diam ac viverra accumsan, nisl arcu scelerisque massa, ut faucibus urna elit
+          vel nisi. Integer mattis dolor eros, id lobortis lorem dictum eu. Ut odio urna, ornare ut
+          auctor a, porttitor vitae lorem.
+        </p>
+
+        <h3>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+          egestas
+        </h3>
+
+        <p>
+          Nunc malesuada risus turpis, at bibendum lectus convallis vitae. Fusce molestie nibh nisi,
+          vel mattis odio vulputate eget. Fusce aliquet augue a massa feugiat, et elementum lectus
+          mattis. Aliquam enim mi, aliquam pellentesque ultricies in, ullamcorper id nisi.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+          egestas. Aenean non magna nibh. Suspendisse placerat, ligula quis rhoncus congue, diam
+          enim ornare leo, quis efficitur sem justo sit amet ipsum. Cras eget mi eu neque
+          ullamcorper scelerisque. Nunc commodo libero scelerisque ante porttitor, vitae pulvinar
+          nisi feugiat. Aenean a vehicula est. Morbi metus felis, lacinia quis urna nec, blandit
+          pretium ante. Sed consectetur ac turpis ac faucibus. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Proin eget pharetra erat.
+        </p>
+
+        <h3>Proin ultricies lacus vitae magna interdum, ut tristique libero tempus</h3>
+
+        <p>
+          Nullam quis nunc ac ex vehicula dignissim id a nisi. Nam porttitor ex quis lectus dictum
+          congue. Pellentesque ligula nisl, elementum et fermentum non, rhoncus et urna. Aenean
+          tincidunt imperdiet tempus. Proin non lorem sollicitudin, molestie leo id, fringilla ex.
+          Pellentesque volutpat lorem viverra erat efficitur, id hendrerit est ullamcorper.
+        </p>
+
+        <h2>Nulla sit amet felis nibh</h2>
+
+        <p>
+          Proin vel consequat turpis. Donec id tellus ut dui accumsan tincidunt. Nulla enim dui,
+          interdum sit amet porttitor sed, euismod at ligula. Maecenas varius arcu quis orci
+          laoreet, pretium imperdiet eros egestas. Ut commodo ac dui nec vulputate. Proin tempus mi
+          vitae molestie efficitur. Nulla tempor iaculis odio vitae aliquet. Pellentesque tempor non
+          nisi at laoreet. Sed sit amet pellentesque velit. Suspendisse vel efficitur erat, eget
+          consequat justo. Curabitur tincidunt efficitur ex, eu congue lacus sodales in. Sed in
+          sapien sit amet ipsum egestas tempor. Duis ornare arcu sit amet arcu accumsan, quis
+          vestibulum arcu scelerisque.
+        </p>
+
+        <h3>Aliquam ut risus a odio cursus molestie</h3>
+
+        <p>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+          Suspendisse pulvinar risus id tellus tempus laoreet ut et mi. Sed id porttitor tellus. Ut
+          a mi nec ligula feugiat ultrices. Nulla facilisi. Sed nec finibus dui. Mauris pretium ante
+          ac pulvinar ultrices.
+        </p>
+
+        <hr>
+
+        <p>
+          Aliquam in purus non orci iaculis tempus. Sed lacinia dui ante, non pretium sem pharetra
+          sed. Proin sed finibus nulla. Suspendisse ac quam non odio tincidunt imperdiet. Orci
+          varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce
+          ipsum magna, varius in mattis vitae, aliquet congue dui.
+        </p>
+
+        <p>
+          Sed fermentum bibendum sem ut pretium. Sed sagittis venenatis nibh sed consequat. Mauris
+          euismod magna eget turpis rhoncus egestas. Nulla eu leo et arcu pretium scelerisque.
+          Aenean auctor lorem feugiat diam commodo vestibulum. Pellentesque id tristique lacus. Ut
+          dignissim tincidunt diam a blandit. In accumsan neque vitae lorem volutpat, blandit
+          elementum ipsum egestas. Donec at euismod justo. Nulla eu ipsum a elit eleifend commodo
+          vitae vel libero. Donec a vestibulum tortor. Vivamus mollis, nibh in viverra finibus,
+          metus quam faucibus ipsum, a tincidunt massa eros a dui. Ut nec tortor et augue imperdiet
+          venenatis.
+        </p>
+
+        <hr class="lliwio asterism">
+
+        <p>
+          Nullam tempor volutpat dapibus. Nulla quis magna eu lorem fermentum tincidunt ut at nibh.
+          Fusce commodo a ipsum sit amet sodales. Etiam eget pulvinar augue. Nullam sit amet velit
+          nunc. Nam eget orci ac enim aliquet eleifend ac egestas arcu. Duis turpis quam, tempor ut
+          lobortis sit amet, molestie eget turpis. Donec convallis volutpat gravida.
+        </p>
+
+        <hr class="lliwio section">
+
+        <p>
+          Suspendisse lorem mauris, ultricies sed elementum quis, ultricies a turpis. Ut mattis
+          ullamcorper nisl, vel porta turpis varius ut. Morbi tristique consequat enim, eu sagittis
+          arcu rutrum molestie. Aenean semper sem et nulla eleifend suscipit. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Nullam sed libero ornare arcu finibus tincidunt
+          faucibus sed odio. Donec massa ante, semper ut ante at, congue tincidunt nisl.
+        </p>
+
+        <h4>Ut eros quam, porta ut ultricies suscipit</h4>
+
+        <p>
+          Venenatis pellentesque ipsum. Suspendisse potenti. Duis lacus nisl, hendrerit molestie
+          efficitur eu, porttitor sed risus. Vivamus cursus tellus purus, sit amet pulvinar leo
+          euismod ut. Suspendisse porttitor lacus eget vestibulum maximus. Cras at arcu in felis
+          hendrerit efficitur vel vel ex. Vestibulum consectetur porta turpis quis dictum. Mauris
+          dictum faucibus mi, quis sollicitudin nulla. Ut turpis tellus, finibus id odio nec,
+          rhoncus venenatis enim. Aliquam posuere viverra tellus ut mollis.
+        </p>
+
+        <h5>Pellentesque et convallis eros</h5>
+
+        <p>Eget lobortis turpis is not a heading.</p>
+
+        <p>
+          Ut porta egestas mauris quis posuere. Pellentesque risus arcu, ullamcorper vel vestibulum
+          et, facilisis in dui. Etiam feugiat bibendum facilisis. Cras consectetur ipsum lectus, sit
+          amet pulvinar mi lobortis vitae. Morbi eget egestas felis. Curabitur erat nulla, malesuada
+          eu est sed, iaculis consectetur libero. Praesent non sem accumsan, pulvinar magna eget,
+          ultricies nisi. Donec egestas, massa quis ultricies hendrerit, tellus orci lobortis
+          mauris, id porta orci mi ac quam. Sed eget commodo felis, a rutrum neque. Donec tincidunt
+          rutrum lorem quis gravida. Integer malesuada enim et ante condimentum, ac vehicula turpis
+          malesuada.
+        </p>
+
+        <h6>In hac habitasse platea dictumst</h6>
+
+        <p>
+          Donec pretium eget turpis eu molestie. Phasellus ullamcorper interdum nisi, id efficitur
+          lorem. Phasellus et nisi ac augue varius posuere. Donec faucibus pharetra pharetra. Ut
+          interdum vestibulum lacinia. Suspendisse ultricies, magna a sollicitudin consectetur, ante
+          enim lacinia leo, ultricies gravida ipsum purus vitae purus. Integer fringilla, odio quis
+          hendrerit elementum, nibh turpis lacinia nibh, quis euismod magna est quis justo. Sed ut
+          tortor non metus viverra fringilla.
+        </p>
+
+        <h6>Vestibulum vehicula sapien nec odio ultrices</h6>
+
+        <p>
+          Eu vulputate tellus venenatis. Suspendisse ullamcorper, lacus nec hendrerit sagittis,
+          turpis sapien pretium ex, ac ultrices eros sem ut diam. Praesent tempor dapibus erat vel
+          pulvinar. Sed interdum mauris ligula, at posuere dui euismod vel. Pellentesque felis
+          dolor, porttitor eu suscipit in, feugiat ut tellus. Ut et dictum orci. Morbi mattis est ac
+          arcu ultrices, in faucibus quam ornare. Pellentesque habitant morbi tristique senectus et
+          netus et malesuada fames ac turpis egestas. In et convallis libero.
+        </p>
+      </main>
+
+      <section class="x-lliwio vertical-grid" aria-label="Form sample">
+        <form>
+          <label>
+            Text input
+            <input name="textInputExample">
+          </label>
+
+          <label>
+            Text input with placeholder
+            <input name="textInputExample__input--with-placeholder" placeholder="Placeholder text">
+          </label>
+
+          <label>
+            Text input followed by helper text
+            <input name="textInputExample__input--with-helper-text" aria-describedby="textInputExample__helper-text">
+          </label>
+          <div id="textInputExample__helper-text">This is the helper text.</div>
+
+          <label>
+            Text input with placeholder followed by helper text
+            <input name="textInputExample__input--with-both" placeholder="Placeholder text" aria-describedby="textInputExample__helper-text--with-both">
+          </label>
+          <div id="textInputExample__helper-text--with-both">This is the helper text.</div>
+
+          <label>
+            Date input
+            <input type="date" name="dateInputExample">
+          </label>
+
+        </form>
+      </section>
+
+      <footer>
+        <aside class="lliwio small-print vertical-grid" aria-label="Legal text">
+          <h2>Integer ac dictum nulla, ac viverra sem</h2>
+          <p>
+            Suspendisse luctus ex elit, quis dignissim massa tempor non. Nullam id dapibus sapien.
+            Vivamus at elit vel neque blandit dapibus. Nulla tortor orci, sagittis id placerat et,
+            eleifend sit amet massa. Pellentesque a iaculis metus. Nam metus lorem, condimentum in
+            eros mattis, imperdiet eleifend risus. Vestibulum feugiat orci ut justo luctus, feugiat
+            aliquam ex euismod. Curabitur ut turpis pretium, posuere sapien eget, blandit diam. Mauris
+            bibendum bibendum sodales. Duis placerat diam id nisi molestie, vel dictum purus
+            facilisis. In laoreet sapien elit, eget luctus tellus egestas et. Sed at eros non elit
+            venenatis aliquam. Suspendisse pellentesque fermentum ante, nec faucibus velit suscipit
+            id.
+          </p>
+          <p>
+            Suspendisse laoreet lobortis dui sit amet efficitur. Proin ut lorem id urna imperdiet
+            porttitor eget eget tortor. Vestibulum pellentesque viverra ipsum, eu dapibus justo
+            porttitor vitae. Cras mi ante, imperdiet in tellus et, iaculis maximus nisi. Nulla
+            consequat nibh non molestie blandit. Aenean molestie massa quis mattis dignissim. Morbi ac
+            urna a justo iaculis bibendum. Quisque cursus eget diam vitae scelerisque. Aliquam a diam
+            id felis convallis lacinia nec vel mauris. Nunc pulvinar quis metus quis lobortis. Quisque
+            pharetra metus ut egestas scelerisque. Mauris tristique felis vitae neque dapibus
+            tincidunt.
+          </p>
+        </aside>
+      </footer>
+
+    </div>
+  </div>
+</body>
+
+</html>

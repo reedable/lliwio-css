@@ -1,0 +1,113 @@
+/* lliwio-css */
+
+:root {
+  /* Font */
+
+  --qx-typography__font-family: system-ui, ui-sans-serif, sans-serif;
+  --qx-typography__font-family--sans-serif: ui-sans-serif, sans-serif;
+  --qx-typography__font-family--serif: ui-serif, serif;
+  --qx-typography__font-family--monospace: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+
+  --qx-typography__font-size: 1rem;
+  --qx-typography__rhythm-unit: round(up, var(--qx-typography__font-size) * 1.5, 1px);
+  --qx-typography__line-height: round(up, 1em, var(--qx-typography__rhythm-unit));
+
+  --qx-typography__font--h1: 400 round(calc(1em * var(--qx-4)), 1px)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h2: 400 round(calc(1em * var(--qx-3)), 1px)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h3: 400 round(calc(1em * var(--qx-2)), 1px)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h4: 400 round(calc(1em * var(--qx-1)), 1px)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h5: 700 round(calc(1em * var(--qx-0)), 1px)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h6: 900 round(calc(1em * var(--qx-1i)), 1px)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+
+  /* Default colors */
+
+  color: var(--qx-semanticColor__color--primary);
+  background-color: var(--qx-semanticColor__background-color--primary);
+}
+
+body {
+  /*
+    Default font set at <body> level, so that all elements that inherit from
+    <body>, such as <p>, <q>, <dt>, <dd>, etc, automatically inehrit this style.
+  */
+  font-family: var(--qx-typography__font-family);
+  font-size: var(--qx-typography__font-size);
+  line-height: var(--qx-typography__line-height);
+}
+
+.lliwio.sans-serif {
+  font-family: var(--qx-typography__font-family--sans-serif);
+}
+
+.lliwio.serif {
+  font-family: var(--qx-typography__font-family--serif);
+}
+
+code,
+samp,
+.lliwio.monospace {
+  font-family: var(--qx-typography__font-family--monospace);
+
+  /* Compensate for rendering engine quirks */
+  font-size: 0.9375em;
+  vertical-align: top;
+}
+
+/* Headings */
+
+h1 {
+  font: var(--qx-typography__font--h1);
+}
+
+h2 {
+  font: var(--qx-typography__font--h2);
+}
+
+h3 {
+  font: var(--qx-typography__font--h3);
+}
+
+h4 {
+  font: var(--qx-typography__font--h4);
+}
+
+h5 {
+  font: var(--qx-typography__font--h5);
+}
+
+h6 {
+  font: var(--qx-typography__font--h6);
+}
+
+/* Vertical rhythm */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+figure,
+details {
+  color: var(--qx-semanticColor__color--primary);
+  line-height: var(--qx-typography__line-height);
+
+  &+h1,
+  &+h2,
+  &+h3,
+  &+h4,
+  &+h5,
+  &+h6 {
+    margin-top: round(up, 2em, var(--qx-typography__line-height));
+  }
+
+  &+p,
+  &+pre,
+  &+blockquote,
+  &+figure {
+    margin-top: round(1em, var(--qx-typography__line-height));
+  }
+}

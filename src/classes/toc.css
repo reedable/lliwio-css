@@ -1,0 +1,26 @@
+/*
+  Table of Contents (TOC)
+
+  @see https: //css-tricks.com/a-perfect-table-of-contents-with-html-css/
+
+  <ol class="lliwio toc" role="list">
+    <li><a href="#chapter_1">Chapter 1</a></li>
+    <li><a href="#chapter_2">Chapter 2</a></li>
+    <li>
+      <a href="#chapter_3">Chapter 3</a>
+
+      <!-- Subsection -->
+      <ol class="llisio toc" role="list">
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
+      </ol>
+    </li>
+  </ol>
+*/
+
+/* role="list" is required for accessibility even for <ul> and <ol> */
+.lliwio.toc[role="list"] {
+  list-style-type: none;
+  padding: 0;
+}

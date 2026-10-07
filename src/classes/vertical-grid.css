@@ -1,0 +1,9 @@
+.lliwio.vertical-grid {
+  --color: var(--qx-semanticColor__neutral-8);
+
+  background-image: repeating-linear-gradient(to bottom,
+      var(--color) 0px,
+      var(--color) 1px,
+      transparent 1px,
+      transparent var(--qx-typography__line-height));
+}

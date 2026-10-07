@@ -1,0 +1,18 @@
+blockquote {
+  font-size: round(up, 1em * var(--qx-1i), 1px);
+  margin-left: calc(2 * var(--qx-typography__line-height));
+
+  p {
+    margin: 0;
+  }
+
+  *+p {
+    text-indent: var(--qx-typography__line-height);
+  }
+
+  &[cite] {
+    &::after {
+      content: ' (' attr(cite) ')';
+    }
+  }
+}

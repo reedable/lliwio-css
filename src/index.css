@@ -1,0 +1,5 @@
+@layer primitives, elements, classes;
+
+@import './primitives/index.css' layer(primitives);
+@import './elements/index.css' layer(elements);
+@import './classes/index.css' layer(classes);

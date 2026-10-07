@@ -1,0 +1,44 @@
+a {
+  color: var(--qx-semanticColor__color--link);
+  font-family: inherit;
+  text-decoration-line: underline;
+  text-underline-offset: 0.25rem;
+
+  &:visited {
+    color: var(--qx-semanticColor__color--visited);
+  }
+
+  /*
+    WARNING
+
+    Disabled link in high constrast mode is visually indistinguishable from
+    normal text. It is recommended that we embed a .hc-only text in the link to
+    annotate this, e.g.
+
+    <a aria-disabled="true">
+      lorem ipsum dolor sit amet
+      <span class="lliwio hc-only" aria-hidden="true">(disabled link)</span>
+    </a>
+
+    Screen reader announces that the link is disabled because we set
+    a[aria-disabled="true"]. We need the .hc-only[aria-hidden="true"] so that
+    the SR does not read the .hc-only text in addition to the link state.
+
+    If the .hc-only text is missing, the CSS will inject " (disabled link)"
+    automatically as a fallback, but this content cannot be localized.
+  */
+  &[aria-disabled="true"] {
+    color: var(--qx-semanticColor__color--disabled);
+    pointer-events: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+
+    @media (prefers-contrast: more) {
+      &:not(:has(.lliwio.hc-only)) {
+        &::after {
+          content: " (disabled link)"
+        }
+      }
+    }
+  }
+}

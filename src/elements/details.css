@@ -1,0 +1,65 @@
+@keyframes details__summary--reveal {
+  0% {
+    opacity: 0;
+    margin-top: -0.5rlh;
+  }
+
+  100% {
+    opacity: 100;
+    margin-top: 0
+  }
+}
+
+details {
+
+  summary {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: calc(0.5 * var(--qx-typography__line-height));
+    list-style: none;
+
+    &>* {
+      display: inline;
+    }
+  }
+
+  /* Safari lacks summary::marker suppoert. */
+  summary::before {
+    content: "▶";
+    display: inline-block;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    summary::before {
+      transition: transform 200ms ease;
+    }
+
+    &[open] {
+      summary::before {
+        transform: rotate(90deg);
+      }
+
+      summary~* {
+        animation: details__summary--reveal 200ms ease-in-out;
+      }
+    }
+  }
+
+  /* In reduced motion, keep details expanded. */
+  @media (prefers-reduced-motion: reduce) {
+    display: block !important;
+
+    summary::before {
+      transform: rotate(90deg);
+    }
+
+    summary~* {
+      display: block !important;
+    }
+
+    &::details-content {
+      content-visibility: visible !important;
+    }
+  }
+}

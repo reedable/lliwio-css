@@ -1,0 +1,90 @@
+:root {
+  /* Brand colors */
+
+  --qx-color__brand--primary: #c8102e;
+  --qx-color__brand--secondary: #ffffff;
+  --qx-color__brand--tertiary: #00b140;
+
+  /*
+    grayscale
+
+    We use L = pow(n/N, k) to calculate the oklab lightness value (L).
+
+      N is the total number of steps we divide the grays,
+      n is the step in the grayscale, e.g. 3/16 means third gray in 16 scale
+      k is an exponent signifying an approximation of gamma correction.
+
+    By default (light mode), we lift the darks aggresively so that the user
+    can distinguish the darker tones near black. This requires lower k value.
+
+    In dark mode, we assume that the user is in a dimly lit room where such
+    compensation is less of an issue. We use higher k value.
+  */
+
+  --qx-color__gray-k: 0.5;
+
+  @media (prefers-color-scheme: dark) {
+    --qx-color__gray-k: 0.7;
+  }
+
+  /* lumunance inversion
+
+  @function --qx-color__linv(--lightness) {
+    result: pow(
+      1 - pow(var(--lightness), 1 / var(--qx-color__gray-k)),
+      var(--qx-color__gray-k)
+    );
+  } */
+
+  /* oklch with gamma corrected dark mode support
+  
+  @function --qx-color__oklch(--lightness, --chroma, --hue) {
+    result: oklch(var(--lightness) var(--chroma) var(--hue));
+
+    @media (prefers-color-scheme: dark) {
+      result: oklch(--qx-color__linv(var(--lightness)) var(--chroma) var(--hue));
+    }
+  } */
+
+  --qx-color__gray-16: oklch(pow(16/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-15: oklch(pow(15/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-14: oklch(pow(14/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-13: oklch(pow(13/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-12: oklch(pow(12/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-11: oklch(pow(11/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-10: oklch(pow(10/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-9: oklch(pow(9/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-8: oklch(pow(8/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-7: oklch(pow(7/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-6: oklch(pow(6/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-5: oklch(pow(5/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-4: oklch(pow(4/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-3: oklch(pow(3/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-2: oklch(pow(2/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-1: oklch(pow(1/16, var(--qx-color__gray-k)) 0 0);
+  --qx-color__gray-0: oklch(pow(0/16, var(--qx-color__gray-k)) 0 0);
+
+  @media (prefers-contrast: more) {
+    --qx-color__gray-16: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-15: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-14: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-13: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-12: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-11: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-10: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-9: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-8: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-7: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-6: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-5: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-4: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-3: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-2: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-1: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    --qx-color__gray-0: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+
+    @media (prefers-color-scheme: dark) {
+      --qx-color__gray-8: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+/*
+  <small> was redefined as a semantic tag for legal and copyright notices, but
+  it continues to only accept phrasing content only. This makes <small> utterly
+  useless.
+
+  Use .small-print to enclose a structured document, e.g.
+
+  <footer>
+    <aside class="lliwio small-print">
+      <h2>Legal notice</h2>
+      <p>Lorem ipsum</p>
+    </article>
+  </footer>
+*/
+
+.lliwio.small-print {
+  --qx-typography__font-size: round(up, 0.75rem, 1px);
+  --qx-typography__rhythm-unit: round(up, 0.75rem, 1px);
+  --qx-typography__line-height: round(up, 0.75rem, 1px);
+
+  --qx-typography__font--h1: 1000 var(--qx-typography__font-size)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h2: 900 var(--qx-typography__font-size)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h3: 800 var(--qx-typography__font-size)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h4: 700 var(--qx-typography__font-size)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h5: 600 var(--qx-typography__font-size)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+  --qx-typography__font--h6: 500 var(--qx-typography__font-size)/var(--qx-typography__line-height) var(--qx-typography__font-family);
+
+  p {
+    font-size: var(--qx-typography__font-size);
+    margin: 0;
+
+    &+p {
+      text-indent: 1lh;
+    }
+  }
+}

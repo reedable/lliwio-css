@@ -1,0 +1,49 @@
+@import '../src/index.css' layer(lliwio-css);
+
+@layer lliwio-css;
+
+/* lliwio site styling */
+
+body {
+  container-type: inline-size;
+
+  .container {
+    overflow-y: auto;
+
+    .content {
+      height: 100vh;
+      margin: 0 auto;
+      max-width: round(down, 65ch + 2rlh, 1px);
+      min-width: 320px;
+      padding: 0 1rlh;
+
+      main {
+        content: '';
+      }
+
+      footer {
+        margin-bottom: 1rlh;
+        margin-top: 3rlh;
+      }
+    }
+  }
+}
+
+/* Skiplinks */
+
+#figure2 {
+
+  ul {
+    anchor-name: --figure2__anchor;
+  }
+
+  #figure2__ul--start {
+    position-anchor: --figure2__anchor;
+    position-area: y-start x-start span-all;
+  }
+
+  #figure2__ul--end {
+    position-anchor: --figure2__anchor;
+    position-area: y-end x-start span-all;
+  }
+}

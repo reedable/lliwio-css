@@ -1,0 +1,8 @@
+figure {
+  margin-left: var(--qx-typography__line-height);
+  margin-right: var(--qx-typography__line-height);
+
+  figcaption {
+    display: block;
+  }
+}
