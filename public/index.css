@@ -10,20 +10,34 @@ body {
   .container {
     container-type: inline-size;
     height: auto;
+    min-width: 320px;
+    padding: 0 1rem;
 
     .content {
-      margin: 0 auto;
+      margin-inline: auto;
       max-width: round(down, 65ch + 1rlh, 1px);
-      min-width: 320px;
-      width: 100vw;
+      width: 100%;
 
       header {
         margin-top: 1rlh;
       }
 
-      /* Table of contents */
+      /*
+        Table of contents
+
+        Replace the ol margin-top with summary padding-bottom for
+        better transition.
+      */
       header+nav {
         margin-top: 1rlh;
+
+        summary {
+          padding-top: 1rlh;
+        }
+
+        ol {
+          margin: 0;
+        }
       }
 
       main {
