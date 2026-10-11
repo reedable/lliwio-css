@@ -1,9 +1,9 @@
 :root {
   /* Brand colors */
 
-  --qx-color__brand--primary: #c8102e;
-  --qx-color__brand--secondary: #ffffff;
-  --qx-color__brand--tertiary: #00b140;
+  --lliw-color__brand--primary: #c8102e;
+  --lliw-color__brand--secondary: #ffffff;
+  --lliw-color__brand--tertiary: #00b140;
 
   /*
     grayscale
@@ -21,70 +21,70 @@
     compensation is less of an issue. We use higher k value.
   */
 
-  --qx-color__gray-k: 0.5;
+  --lliw-color__gray-k: 0.5;
 
   @media (prefers-color-scheme: dark) {
-    --qx-color__gray-k: 0.7;
+    --lliw-color__gray-k: 0.7;
   }
 
   /* lumunance inversion
 
-  @function --qx-color__linv(--lightness) {
+  @function --lliw-color__linv(--lightness) {
     result: pow(
-      1 - pow(var(--lightness), 1 / var(--qx-color__gray-k)),
-      var(--qx-color__gray-k)
+      1 - pow(var(--lightness), 1 / var(--lliw-color__gray-k)),
+      var(--lliw-color__gray-k)
     );
   } */
 
   /* oklch with gamma corrected dark mode support
   
-  @function --qx-color__oklch(--lightness, --chroma, --hue) {
+  @function --lliw-color__oklch(--lightness, --chroma, --hue) {
     result: oklch(var(--lightness) var(--chroma) var(--hue));
 
     @media (prefers-color-scheme: dark) {
-      result: oklch(--qx-color__linv(var(--lightness)) var(--chroma) var(--hue));
+      result: oklch(--lliw-color__linv(var(--lightness)) var(--chroma) var(--hue));
     }
   } */
 
-  --qx-color__gray-16: oklch(pow(16/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-15: oklch(pow(15/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-14: oklch(pow(14/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-13: oklch(pow(13/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-12: oklch(pow(12/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-11: oklch(pow(11/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-10: oklch(pow(10/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-9: oklch(pow(9/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-8: oklch(pow(8/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-7: oklch(pow(7/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-6: oklch(pow(6/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-5: oklch(pow(5/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-4: oklch(pow(4/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-3: oklch(pow(3/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-2: oklch(pow(2/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-1: oklch(pow(1/16, var(--qx-color__gray-k)) 0 0);
-  --qx-color__gray-0: oklch(pow(0/16, var(--qx-color__gray-k)) 0 0);
+  --lliw-color__gray-16: oklch(pow(16/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-15: oklch(pow(15/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-14: oklch(pow(14/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-13: oklch(pow(13/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-12: oklch(pow(12/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-11: oklch(pow(11/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-10: oklch(pow(10/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-9: oklch(pow(9/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-8: oklch(pow(8/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-7: oklch(pow(7/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-6: oklch(pow(6/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-5: oklch(pow(5/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-4: oklch(pow(4/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-3: oklch(pow(3/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-2: oklch(pow(2/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-1: oklch(pow(1/16, var(--lliw-color__gray-k)) 0 0);
+  --lliw-color__gray-0: oklch(pow(0/16, var(--lliw-color__gray-k)) 0 0);
 
   @media (prefers-contrast: more) {
-    --qx-color__gray-16: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-15: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-14: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-13: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-12: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-11: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-10: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-9: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-8: oklch(pow(1, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-7: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-6: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-5: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-4: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-3: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-2: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-1: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
-    --qx-color__gray-0: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+    --lliw-color__gray-16: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-15: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-14: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-13: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-12: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-11: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-10: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-9: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-8: oklch(pow(1, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-7: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-6: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-5: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-4: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-3: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-2: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-1: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
+    --lliw-color__gray-0: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
 
     @media (prefers-color-scheme: dark) {
-      --qx-color__gray-8: oklch(pow(0, var(--qx-color__gray-k)) 0 0);
+      --lliw-color__gray-8: oklch(pow(0, var(--lliw-color__gray-k)) 0 0);
     }
   }
 }

@@ -1,4 +1,4 @@
-.lliwio.sr-only {
+@scope(.lliw.sr-only) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -22,14 +22,14 @@
 }
 
 /* Skiplinks */
-a.lliwio.sr-only {
+@scope(a.lliw.sr-only) {
 
   &:focus,
   &:active {
-    background-color: var(--qx-semanticColor__background-color--primary);
-    border: 1px solid var(--qx-semanticColor__color--link);
-    line-height: calc(2 * var(--qx-typography__line-height));
+    background-color: var(--lliw-semanticColor__background-color--primary);
+    border: 1px solid var(--lliw-semanticColor__color--link);
+    line-height: calc(2 * var(--lliw-typography__line-height));
     padding: 0 1em;
-    /* position: absolute; */
+    position: absolute;
   }
 }

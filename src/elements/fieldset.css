@@ -3,11 +3,11 @@ fieldset {
   min-width: 100%;
 
   legend {
-    font: var(--qx-typography__font--h6);
+    font: var(--lliw-typography__font--h6);
     width: 100%;
   }
 
   &+fieldset {
-    margin-top: round(2 * var(--qx-typography__line-height), 1px);
+    margin-top: round(2 * var(--lliw-typography__line-height), 1px);
   }
 }

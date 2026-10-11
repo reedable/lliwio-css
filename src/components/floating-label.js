@@ -29,7 +29,7 @@ export default class FloatingLabel extends ObservedElement {
 
     if (!labelEl) {
       const innerHTML = this.innerHTML;
-      this.innerHTML = `<label class="lliwio floating">${innerHTML}</label>`;
+      this.innerHTML = `<label class="lliw floating">${innerHTML}</label>`;
     }
 
     const inputEl = this.querySelector('input');

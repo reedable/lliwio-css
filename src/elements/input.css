@@ -1,16 +1,16 @@
 input {
   background-color: inherit;
   border: 2px solid transparent;
-  font-size: var(--qx-typography__font-size);
-  color: var(--qx-semanticColor__color--primary);
+  font-size: var(--lliw-typography__font-size);
+  color: var(--lliw-semanticColor__color--primary);
 
   @media (prefers-contrast: more) {
-    border-color: var(--qx-semanticColor__color--primary);
+    border-color: var(--lliw-semanticColor__color--primary);
 
     &:focus,
     &:focus::placeholder {
-      background-color: var(--qx-semanticColor__color--primary);
-      color: var(--qx-semanticColor__background-color--primary);
+      background-color: var(--lliw-semanticColor__color--primary);
+      color: var(--lliw-semanticColor__background-color--primary);
     }
   }
 }

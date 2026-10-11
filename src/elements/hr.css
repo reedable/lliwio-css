@@ -8,9 +8,9 @@
 
 hr {
   border: 0;
-  color: var(--qx-semanticColor__color--primary);
-  height: var(--qx-typography__line-height);
-  margin: calc(1.5 * var(--qx-typography__line-height)) auto;
+  color: var(--lliw-semanticColor__color--primary);
+  height: var(--lliw-typography__line-height);
+  margin: calc(1.5 * var(--lliw-typography__line-height)) auto;
   width: 100%;
 
   &:not([class])::before {
@@ -27,16 +27,16 @@ hr {
   three horizontal asterisks. Provided here for fun.
 */
 
-hr.lliwio.asterism {
+hr.lliw.asterism {
   border: 0;
-  height: var(--qx-typography__line-height);
-  margin: calc(1.5 * var(--qx-typography__line-height)) auto;
+  height: var(--lliw-typography__line-height);
+  margin: calc(1.5 * var(--lliw-typography__line-height)) auto;
   width: 100%;
 
   &::before {
     content: '\2042';
     display: block;
-    font-size: round(up, 1em * var(--qx-4), 1px);
+    font-size: round(up, 1em * var(--lliw-4), 1px);
     text-align: center;
     width: 100%;
   }
@@ -47,12 +47,12 @@ hr.lliwio.asterism {
   symbol is not the same as use of <section> tags.
 */
 
-hr.lliwio.section {
+hr.lliw.section {
   border: none;
-  border-left: 40px solid var(--qx-semanticColor__color--primary);
-  border-right: 40px solid var(--qx-semanticColor__color--primary);
+  border-left: 40px solid var(--lliw-semanticColor__color--primary);
+  border-right: 40px solid var(--lliw-semanticColor__color--primary);
   height: 2px;
-  margin: calc(2 * var(--qx-typography__line-height) - 1px) auto;
+  margin: calc(2 * var(--lliw-typography__line-height) - 1px) auto;
   overflow: visible;
   position: relative;
   width: 100px;
@@ -60,12 +60,12 @@ hr.lliwio.section {
   &::before {
     content: '\00A7';
     display: block;
-    font-size: round(up, 1em * var(--qx-2), 1px);
+    font-size: round(up, 1em * var(--lliw-2), 1px);
     font-weight: 300;
-    line-height: var(--qx-typography__line-height);
+    line-height: var(--lliw-typography__line-height);
     position: absolute;
     text-align: center;
-    top: round(-0.5 * var(--qx-typography__line-height), 1px);
+    top: round(-0.5 * var(--lliw-typography__line-height), 1px);
     width: 100%;
   }
 }

@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="lliwio viewport">
+<html lang="en" class="lliw viewport">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typography Sample</title>
+  <title>lliw CSS</title>
   <link rel="stylesheet" href="./index.css">
   <!-- <script type="module" src="./scripts/index.js"></script> -->
 
   <noscript>
-    <style>
-      .control-panel {
-        display: none;
-      }
-    </style>
   </noscript>
 </head>
 
 <body>
-  <a href="#main" class="lliwio sr-only">Go to main content</a>
+  <a href="#main" class="lliw sr-only">Go to main content</a>
 
   <div class="container">
-
-    <div class="content">
+    <div class="content lliw vertical-grid">
 
       <noscript>
         <section aria-label="banner">
@@ -31,9 +25,31 @@
         </section>
       </noscript>
 
-      <main id="main" tabindex="-1" class="lliwio vertical-grid">
+      <header>
+        <h1>lliw CSS</h1>
+        <p>CSS-first typography and UI components</p>
+      </header>
 
-        <h1>Lorem ipsum dolor sit amet</h1>
+      <nav aria-label="Table of contents">
+        <details>
+          <summary>
+            Table of contents
+          </summary>
+
+          <ol role="list" class="lliw toc">
+            <li><a href="#h2-0">Introduction</a></li>
+            <ol role="list">
+              <li>Foo</li>
+              <li>Bar</li>
+              <li>Baz</li>
+            </ol>
+          </ol>
+        </details>
+      </nav>
+
+      <main id="main" tabindex="-1">
+
+        <h2 id="h2-0">Introduction</h2>
 
         <p><q cite="https://www.lipsum.com">Consectetur adipiscing elit.</q></p>
 
@@ -50,7 +66,7 @@
             <dt>Disabled link</dt>
             <dd>
               <a aria-disabled="true">Nunc quis ligula nisi
-                <span class="lliwio hc-only" aria-hidden="true">(disabled link)</span>
+                <span class="lliw hc-only" aria-hidden="true">(disabled link)</span>
               </a>
             </dd>
           </dl>
@@ -61,7 +77,7 @@
         </figure>
 
         <figure id="figure2">
-          <a id="figure2__ul--start" class="lliwio sr-only" href="#figure2__ul--end">Go to the bottom of the list</a>
+          <a id="figure2__ul--start" class="lliw sr-only" href="#figure2__ul--end">Go to the bottom of the list</a>
           <ul>
             <li>One</li>
             <li>Two</li>
@@ -69,7 +85,7 @@
             <li>Four</li>
             <li>Five</li>
           </ul>
-          <a id="figure2__ul--end" class="lliwio sr-only" href="#figure2__ul--start">Go back to top</a>
+          <a id="figure2__ul--end" class="lliw sr-only" href="#figure2__ul--start">Go back to top</a>
         </figure>
 
         <p>
@@ -100,7 +116,7 @@
         </details>
 
         <p>
-          You can apply <span class="lliwio monospace">monospace font in a paragraph</span> for purely
+          You can apply <span class="lliw monospace">monospace font in a paragraph</span> for purely
           visual effects using <code>&lt;span&gt;</code>.
         </p>
 
@@ -113,7 +129,7 @@
         </p>
 
         <pre><code>body {
-  font-family: var(--qx-typography__font-family--serif);
+  font-family: var(--lliw-typography__font-family--serif);
 }
 
 code,
@@ -221,7 +237,7 @@ samp,
           venenatis.
         </p>
 
-        <hr class="lliwio asterism">
+        <hr class="lliw asterism">
 
         <p>
           Nullam tempor volutpat dapibus. Nulla quis magna eu lorem fermentum tincidunt ut at nibh.
@@ -230,7 +246,7 @@ samp,
           lobortis sit amet, molestie eget turpis. Donec convallis volutpat gravida.
         </p>
 
-        <hr class="lliwio section">
+        <hr class="lliw section">
 
         <p>
           Suspendisse lorem mauris, ultricies sed elementum quis, ultricies a turpis. Ut mattis
@@ -289,7 +305,7 @@ samp,
         </p>
       </main>
 
-      <section class="x-lliwio vertical-grid" aria-label="Form sample">
+      <section aria-label="Form sample">
         <form>
           <label>
             Text input
@@ -322,7 +338,7 @@ samp,
       </section>
 
       <footer>
-        <aside class="lliwio small-print vertical-grid" aria-label="Legal text">
+        <aside class="lliw small-print" aria-label="Legal text">
           <h2>Integer ac dictum nulla, ac viverra sem</h2>
           <p>
             Suspendisse luctus ex elit, quis dignissim massa tempor non. Nullam id dapibus sapien.

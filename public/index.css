@@ -1,28 +1,37 @@
-@import '../src/index.css' layer(lliwio-css);
+@import '../src/index.css' layer(lliw);
 
-@layer lliwio-css;
+@layer lliw;
 
-/* lliwio site styling */
+/* lliw site styling */
 
 body {
-  container-type: inline-size;
+  overflow: scroll;
 
   .container {
-    overflow-y: auto;
+    container-type: inline-size;
+    height: auto;
 
     .content {
-      height: 100vh;
       margin: 0 auto;
-      max-width: round(down, 65ch + 2rlh, 1px);
+      max-width: round(down, 65ch + 1rlh, 1px);
       min-width: 320px;
-      padding: 0 1rlh;
+      width: 100vw;
+
+      header {
+        margin-top: 1rlh;
+      }
+
+      /* Table of contents */
+      header+nav {
+        margin-top: 1rlh;
+      }
 
       main {
-        content: '';
+        margin-top: 1rlh;
       }
 
       footer {
-        margin-bottom: 1rlh;
+        margin-bottom: 4rlh;
         margin-top: 3rlh;
       }
     }
@@ -38,12 +47,14 @@ body {
   }
 
   #figure2__ul--start {
+    height: auto;
     position-anchor: --figure2__anchor;
-    position-area: y-start x-start span-all;
+    position-area: y-start span-x-end;
   }
 
   #figure2__ul--end {
+    height: auto;
     position-anchor: --figure2__anchor;
-    position-area: y-end x-start span-all;
+    position-area: y-end span-x-end;
   }
 }

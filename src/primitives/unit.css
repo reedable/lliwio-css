@@ -1,18 +1,18 @@
 :root {
 
-  --qx-8: pow(sqrt(sqrt(2)), 8);
-  --qx-7: pow(sqrt(sqrt(2)), 7);
-  --qx-6: pow(sqrt(sqrt(2)), 6);
-  --qx-5: pow(sqrt(sqrt(2)), 5);
-  --qx-4: pow(sqrt(sqrt(2)), 4);
-  --qx-3: pow(sqrt(sqrt(2)), 3);
-  --qx-2: pow(sqrt(sqrt(2)), 2);
-  --qx-1: pow(sqrt(sqrt(2)), 1);
-  --qx-0: 1;
-  --qx-1i: pow(sqrt(sqrt(2)), -1);
-  --qx-2i: pow(sqrt(sqrt(2)), -2);
-  --qx-3i: pow(sqrt(sqrt(2)), -3);
-  --qx-4i: pow(sqrt(sqrt(2)), -4);
-  --qx-5i: pow(sqrt(sqrt(2)), -5);
-  --qx-6i: pow(sqrt(sqrt(2)), -6);
+  --lliw-8: pow(sqrt(sqrt(2)), 8);
+  --lliw-7: pow(sqrt(sqrt(2)), 7);
+  --lliw-6: pow(sqrt(sqrt(2)), 6);
+  --lliw-5: pow(sqrt(sqrt(2)), 5);
+  --lliw-4: pow(sqrt(sqrt(2)), 4);
+  --lliw-3: pow(sqrt(sqrt(2)), 3);
+  --lliw-2: pow(sqrt(sqrt(2)), 2);
+  --lliw-1: pow(sqrt(sqrt(2)), 1);
+  --lliw-0: 1;
+  --lliw-1i: pow(sqrt(sqrt(2)), -1);
+  --lliw-2i: pow(sqrt(sqrt(2)), -2);
+  --lliw-3i: pow(sqrt(sqrt(2)), -3);
+  --lliw-4i: pow(sqrt(sqrt(2)), -4);
+  --lliw-5i: pow(sqrt(sqrt(2)), -5);
+  --lliw-6i: pow(sqrt(sqrt(2)), -6);
 }

@@ -3,7 +3,7 @@
 
   @see https: //css-tricks.com/a-perfect-table-of-contents-with-html-css/
 
-  <ol class="lliwio toc" role="list">
+  <ol class="lliw toc" role="list">
     <li><a href="#chapter_1">Chapter 1</a></li>
     <li><a href="#chapter_2">Chapter 2</a></li>
     <li>
@@ -20,7 +20,14 @@
 */
 
 /* role="list" is required for accessibility even for <ul> and <ol> */
-.lliwio.toc[role="list"] {
+@scope(.lliw.toc[role="list"]) {
   list-style-type: none;
   padding: 0;
+  padding-inline-start: 0;
+
+  ol[role="list"],
+  ul[role="list"] {
+    list-style-type: none;
+    padding-inline-start: var(--lliw-typography__line-height);
+  }
 }

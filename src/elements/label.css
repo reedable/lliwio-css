@@ -7,17 +7,17 @@
   </label>
 */
 label {
-  --label__font-size: round(var(--qx-typography__font-size) * var(--qx-2i), 1px);
-  --label__line-height: round(var(--qx-typography__line-height) * var(--qx-2i), 1px);
-  --input__font-size: round(var(--qx-typography__font-size) * var(--qx-1), 1px);
-  --input__height: round(var(--qx-typography__line-height) * var(--qx-1), 1px);
+  --label__font-size: round(var(--lliw-typography__font-size) * var(--lliw-2i), 1px);
+  --label__line-height: round(var(--lliw-typography__line-height) * var(--lliw-2i), 1px);
+  --input__font-size: round(var(--lliw-typography__font-size) * var(--lliw-1), 1px);
+  --input__height: round(var(--lliw-typography__line-height) * var(--lliw-1), 1px);
   --input__padding: 0.125rem;
-  --height: calc(2 * var(--qx-typography__line-height));
+  --height: calc(2 * var(--lliw-typography__line-height));
   --transition__duration: 300ms;
   --border-width: 0.125rem;
 
-  /* background-color: var(--qx-semanticColor__background-color--secondary); */
-  color: var(--qx-semanticColor__color--primary);
+  /* background-color: var(--lliw-semanticColor__background-color--secondary); */
+  color: var(--lliw-semanticColor__color--primary);
   display: block;
   font-size: var(--label__font-size);
   font-weight: 700;
@@ -34,15 +34,15 @@ label {
   }
 
   &+label {
-    margin-top: var(--qx-typography__line-height);
+    margin-top: var(--lliw-typography__line-height);
   }
 
   /* Bottom border */
 
   &::before {
-    background-color: var(--qx-semanticColor__background-color--secondary);
+    background-color: var(--lliw-semanticColor__background-color--secondary);
     border-bottom: var(--border-width) solid;
-    border-color: var(--qx-semanticColor__color--secondary);
+    border-color: var(--lliw-semanticColor__color--secondary);
     border-color: transparent;
     bottom: 0;
     content: '';
@@ -60,7 +60,7 @@ label {
 
   @media (prefers-contrast: no-preference) {
     &::after {
-      border-bottom: var(--border-width) solid var(--qx-semanticColor__color--focus);
+      border-bottom: var(--border-width) solid var(--lliw-semanticColor__color--focus);
       border-radius: var(--border-width);
       bottom: 0;
       content: '';
@@ -80,7 +80,7 @@ label {
 
   &:focus-within {
     &::before {
-      border-color: var(--qx-semanticColor__color--focus);
+      border-color: var(--lliw-semanticColor__color--focus);
     }
 
     &::after {
@@ -112,9 +112,9 @@ label {
     }
 
     &::placeholder {
-      color: var(--qx-semanticColor__color--secondary);
+      color: var(--lliw-semanticColor__color--secondary);
       font-style: italic;
-      font-size: round(up, var(--qx-typography__font-size) * var(--qx-1i), 1px);
+      font-size: round(up, var(--lliw-typography__font-size) * var(--lliw-1i), 1px);
     }
   }
 
@@ -125,11 +125,11 @@ label {
   */
 
   &:has(input[aria-describedby])+[id] {
-    color: var(--qx-semanticColor__color--secondary);
-    font-size: round(up, 1rem * var(--qx-2i), 1px);
+    color: var(--lliw-semanticColor__color--secondary);
+    font-size: round(up, 1rem * var(--lliw-2i), 1px);
     font-weight: 300;
-    line-height: round(up, 1rem * var(--qx-0), 1px);
-    min-height: var(--qx-typography__line-height);
+    line-height: round(up, 1rem * var(--lliw-0), 1px);
+    min-height: var(--lliw-typography__line-height);
     padding: 0 0 0 calc(2 * var(--input__padding, 0.125rem));
   }
 }

@@ -1,4 +1,4 @@
-.lliwio.hc-only {
+@scope(.lliw.hc-only) {
   display: none;
 
   @media (prefers-contrast: more) {

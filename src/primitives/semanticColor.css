@@ -1,87 +1,87 @@
 :root {
   /* Neutrals */
-  --qx-semanticColor__neutral-16: var(--qx-color__gray-16);
-  --qx-semanticColor__neutral-15: var(--qx-color__gray-15);
-  --qx-semanticColor__neutral-14: var(--qx-color__gray-14);
-  --qx-semanticColor__neutral-13: var(--qx-color__gray-13);
-  --qx-semanticColor__neutral-12: var(--qx-color__gray-12);
-  --qx-semanticColor__neutral-11: var(--qx-color__gray-11);
-  --qx-semanticColor__neutral-10: var(--qx-color__gray-10);
-  --qx-semanticColor__neutral-9: var(--qx-color__gray-9);
-  --qx-semanticColor__neutral-8: var(--qx-color__gray-8);
-  --qx-semanticColor__neutral-7: var(--qx-color__gray-7);
-  --qx-semanticColor__neutral-6: var(--qx-color__gray-6);
-  --qx-semanticColor__neutral-5: var(--qx-color__gray-5);
-  --qx-semanticColor__neutral-4: var(--qx-color__gray-4);
-  --qx-semanticColor__neutral-3: var(--qx-color__gray-3);
-  --qx-semanticColor__neutral-2: var(--qx-color__gray-2);
-  --qx-semanticColor__neutral-1: var(--qx-color__gray-1);
-  --qx-semanticColor__neutral-0: var(--qx-color__gray-0);
+  --lliw-semanticColor__neutral-16: var(--lliw-color__gray-16);
+  --lliw-semanticColor__neutral-15: var(--lliw-color__gray-15);
+  --lliw-semanticColor__neutral-14: var(--lliw-color__gray-14);
+  --lliw-semanticColor__neutral-13: var(--lliw-color__gray-13);
+  --lliw-semanticColor__neutral-12: var(--lliw-color__gray-12);
+  --lliw-semanticColor__neutral-11: var(--lliw-color__gray-11);
+  --lliw-semanticColor__neutral-10: var(--lliw-color__gray-10);
+  --lliw-semanticColor__neutral-9: var(--lliw-color__gray-9);
+  --lliw-semanticColor__neutral-8: var(--lliw-color__gray-8);
+  --lliw-semanticColor__neutral-7: var(--lliw-color__gray-7);
+  --lliw-semanticColor__neutral-6: var(--lliw-color__gray-6);
+  --lliw-semanticColor__neutral-5: var(--lliw-color__gray-5);
+  --lliw-semanticColor__neutral-4: var(--lliw-color__gray-4);
+  --lliw-semanticColor__neutral-3: var(--lliw-color__gray-3);
+  --lliw-semanticColor__neutral-2: var(--lliw-color__gray-2);
+  --lliw-semanticColor__neutral-1: var(--lliw-color__gray-1);
+  --lliw-semanticColor__neutral-0: var(--lliw-color__gray-0);
 
   @media screen and (prefers-color-scheme: dark) {
-    --qx-semanticColor__neutral-16: var(--qx-color__gray-0);
-    --qx-semanticColor__neutral-15: var(--qx-color__gray-1);
-    --qx-semanticColor__neutral-14: var(--qx-color__gray-2);
-    --qx-semanticColor__neutral-13: var(--qx-color__gray-3);
-    --qx-semanticColor__neutral-12: var(--qx-color__gray-4);
-    --qx-semanticColor__neutral-11: var(--qx-color__gray-5);
-    --qx-semanticColor__neutral-10: var(--qx-color__gray-6);
-    --qx-semanticColor__neutral-9: var(--qx-color__gray-7);
-    --qx-semanticColor__neutral-8: var(--qx-color__gray-8);
-    --qx-semanticColor__neutral-7: var(--qx-color__gray-9);
-    --qx-semanticColor__neutral-6: var(--qx-color__gray-10);
-    --qx-semanticColor__neutral-5: var(--qx-color__gray-11);
-    --qx-semanticColor__neutral-4: var(--qx-color__gray-12);
-    --qx-semanticColor__neutral-3: var(--qx-color__gray-13);
-    --qx-semanticColor__neutral-2: var(--qx-color__gray-14);
-    --qx-semanticColor__neutral-1: var(--qx-color__gray-15);
-    --qx-semanticColor__neutral-0: var(--qx-color__gray-16);
+    --lliw-semanticColor__neutral-16: var(--lliw-color__gray-0);
+    --lliw-semanticColor__neutral-15: var(--lliw-color__gray-1);
+    --lliw-semanticColor__neutral-14: var(--lliw-color__gray-2);
+    --lliw-semanticColor__neutral-13: var(--lliw-color__gray-3);
+    --lliw-semanticColor__neutral-12: var(--lliw-color__gray-4);
+    --lliw-semanticColor__neutral-11: var(--lliw-color__gray-5);
+    --lliw-semanticColor__neutral-10: var(--lliw-color__gray-6);
+    --lliw-semanticColor__neutral-9: var(--lliw-color__gray-7);
+    --lliw-semanticColor__neutral-8: var(--lliw-color__gray-8);
+    --lliw-semanticColor__neutral-7: var(--lliw-color__gray-9);
+    --lliw-semanticColor__neutral-6: var(--lliw-color__gray-10);
+    --lliw-semanticColor__neutral-5: var(--lliw-color__gray-11);
+    --lliw-semanticColor__neutral-4: var(--lliw-color__gray-12);
+    --lliw-semanticColor__neutral-3: var(--lliw-color__gray-13);
+    --lliw-semanticColor__neutral-2: var(--lliw-color__gray-14);
+    --lliw-semanticColor__neutral-1: var(--lliw-color__gray-15);
+    --lliw-semanticColor__neutral-0: var(--lliw-color__gray-16);
   }
 
   /* Foreground colors */
 
-  --qx-semanticColor__color--primary: var(--qx-semanticColor__neutral-1);
-  --qx-semanticColor__color--secondary: var(--qx-semanticColor__neutral-3);
-  --qx-semanticColor__color--tertiary: var(--qx-semanticColor__neutral-5);
+  --lliw-semanticColor__color--primary: var(--lliw-semanticColor__neutral-1);
+  --lliw-semanticColor__color--secondary: var(--lliw-semanticColor__neutral-3);
+  --lliw-semanticColor__color--tertiary: var(--lliw-semanticColor__neutral-5);
 
   /* Background colors */
 
-  --qx-semanticColor__background-color--primary: var(--qx-semanticColor__neutral-16);
-  --qx-semanticColor__background-color--secondary: var(--qx-semanticColor__neutral-14);
-  --qx-semanticColor__background-color--tertiary: var(--qx-semanticColor__neutral-12);
+  --lliw-semanticColor__background-color--primary: var(--lliw-semanticColor__neutral-16);
+  --lliw-semanticColor__background-color--secondary: var(--lliw-semanticColor__neutral-14);
+  --lliw-semanticColor__background-color--tertiary: var(--lliw-semanticColor__neutral-12);
 
   /* Browser colors */
 
-  --qx-semanticColor__color--link: oklch(0.452014 0.313214 264.052);
-  --qx-semanticColor__color--active: oklch(0.628 0.2577 29.23);
-  --qx-semanticColor__color--visited: oklch(0.3784 0.1716 302.15);
-  --qx-semanticColor__color--disabled: var(--qx-semanticColor__neutral-7);
-  --qx-semanticColor__color--focus: var(--qx-semanticColor__color--link);
-  --qx-semanticColor__color--hover: var(--qx-semanticColor__color--link);
+  --lliw-semanticColor__color--link: oklch(0.452014 0.313214 264.052);
+  --lliw-semanticColor__color--active: oklch(0.628 0.2577 29.23);
+  --lliw-semanticColor__color--visited: oklch(0.3784 0.1716 302.15);
+  --lliw-semanticColor__color--disabled: var(--lliw-semanticColor__neutral-7);
+  --lliw-semanticColor__color--focus: var(--lliw-semanticColor__color--link);
+  --lliw-semanticColor__color--hover: var(--lliw-semanticColor__color--link);
 
   @media screen and (prefers-color-scheme: dark) {
-    --qx-semanticColor__color--link: oklch(pow(1 - pow(0.452014, 1/var(--qx-color__gray-k)), var(--qx-color__gray-k)) 0.313214 264.052);
-    --qx-semanticColor__color--active: oklch(pow(1 - pow(0.628, 1/var(--qx-color__gray-k)), var(--qx-color__gray-k)) 0.2577 29.23);
-    --qx-semanticColor__color--visited: oklch(pow(1 - pow(0.3784, 1/var(--qx-color__gray-k)), var(--qx-color__gray-k)) 0.1716 302.15);
-    --qx-semanticColor__color--disabled: var(--qx-semanticColor__neutral-4);
-    --qx-semanticColor__color--focus: var(--qx-semanticColor__color--link);
-    --qx-semanticColor__color--hover: var(--qx-semanticColor__color--link);
+    --lliw-semanticColor__color--link: oklch(pow(1 - pow(0.452014, 1/var(--lliw-color__gray-k)), var(--lliw-color__gray-k)) 0.313214 264.052);
+    --lliw-semanticColor__color--active: oklch(pow(1 - pow(0.628, 1/var(--lliw-color__gray-k)), var(--lliw-color__gray-k)) 0.2577 29.23);
+    --lliw-semanticColor__color--visited: oklch(pow(1 - pow(0.3784, 1/var(--lliw-color__gray-k)), var(--lliw-color__gray-k)) 0.1716 302.15);
+    --lliw-semanticColor__color--disabled: var(--lliw-semanticColor__neutral-4);
+    --lliw-semanticColor__color--focus: var(--lliw-semanticColor__color--link);
+    --lliw-semanticColor__color--hover: var(--lliw-semanticColor__color--link);
   }
 
   /* Status colors */
 
-  --qx-semanticColor__color--success: green;
-  --qx-semanticColor__color--warning: orange;
-  --qx-semanticColor__color--danger: red;
-  --qx-semanticColor__color--error: red;
-  --qx-semanticColor__color--info: blue;
+  --lliw-semanticColor__color--success: green;
+  --lliw-semanticColor__color--warning: orange;
+  --lliw-semanticColor__color--danger: red;
+  --lliw-semanticColor__color--error: red;
+  --lliw-semanticColor__color--info: blue;
 
   @media screen and (prefers-color-scheme: dark) {
-    --qx-semanticColor__color--success: green;
-    --qx-semanticColor__color--warning: orange;
-    --qx-semanticColor__color--error: red;
-    --qx-semanticColor__color--error: red;
-    --qx-semanticColor__color--info: blue;
+    --lliw-semanticColor__color--success: green;
+    --lliw-semanticColor__color--warning: orange;
+    --lliw-semanticColor__color--error: red;
+    --lliw-semanticColor__color--error: red;
+    --lliw-semanticColor__color--info: blue;
   }
 
 }

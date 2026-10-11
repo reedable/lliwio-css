@@ -1,11 +1,11 @@
 a {
-  color: var(--qx-semanticColor__color--link);
+  color: var(--lliw-semanticColor__color--link);
   font-family: inherit;
   text-decoration-line: underline;
   text-underline-offset: 0.25rem;
 
   &:visited {
-    color: var(--qx-semanticColor__color--visited);
+    color: var(--lliw-semanticColor__color--visited);
   }
 
   /*
@@ -17,7 +17,7 @@ a {
 
     <a aria-disabled="true">
       lorem ipsum dolor sit amet
-      <span class="lliwio hc-only" aria-hidden="true">(disabled link)</span>
+      <span class="lliw hc-only" aria-hidden="true">(disabled link)</span>
     </a>
 
     Screen reader announces that the link is disabled because we set
@@ -28,13 +28,13 @@ a {
     automatically as a fallback, but this content cannot be localized.
   */
   &[aria-disabled="true"] {
-    color: var(--qx-semanticColor__color--disabled);
+    color: var(--lliw-semanticColor__color--disabled);
     pointer-events: none;
     text-decoration-line: underline;
     text-decoration-thickness: 0.5px;
 
     @media (prefers-contrast: more) {
-      &:not(:has(.lliwio.hc-only)) {
+      &:not(:has(.lliw.hc-only)) {
         &::after {
           content: " (disabled link)"
         }

@@ -16,7 +16,7 @@ details {
     align-items: center;
     cursor: pointer;
     display: flex;
-    gap: calc(0.5 * var(--qx-typography__line-height));
+    gap: calc(0.5 * var(--lliw-typography__line-height));
     list-style: none;
 
     &>* {

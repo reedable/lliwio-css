@@ -1,6 +1,6 @@
 figure {
-  margin-left: var(--qx-typography__line-height);
-  margin-right: var(--qx-typography__line-height);
+  margin-left: var(--lliw-typography__line-height);
+  margin-right: var(--lliw-typography__line-height);
 
   figcaption {
     display: block;
