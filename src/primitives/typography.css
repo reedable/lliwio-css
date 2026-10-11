@@ -93,6 +93,7 @@ article {
   p,
   blockquote,
   pre,
+  table,
   figure,
   details {
     color: var(--lliw-semanticColor__color--primary);
@@ -110,8 +111,21 @@ article {
     &+p,
     &+pre,
     &+blockquote,
+    &+table,
     &+figure {
       margin-top: round(1em, var(--lliw-typography__line-height));
     }
+  }
+}
+
+/* Lists */
+ol,
+ul {
+  margin-top: round(1em, var(--lliw-typography__line-height));
+  padding-inline-start: 1lh;
+
+  li>ol,
+  li>ul {
+    margin-top: 0;
   }
 }

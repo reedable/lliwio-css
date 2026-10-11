@@ -1,7 +1,9 @@
 @scope(.lliw.hc-only) {
-  display: none;
+  :scope {
+    display: none;
 
-  @media (prefers-contrast: more) {
-    display: inherit;
+    @media (prefers-contrast: more) {
+      display: inherit;
+    }
   }
 }

@@ -21,13 +21,15 @@
 
 /* role="list" is required for accessibility even for <ul> and <ol> */
 @scope(.lliw.toc[role="list"]) {
-  list-style-type: none;
-  padding: 0;
-  padding-inline-start: 0;
-
-  ol[role="list"],
-  ul[role="list"] {
+  :scope {
     list-style-type: none;
-    padding-inline-start: var(--lliw-typography__line-height);
+    padding: 0;
+    padding-inline-start: 0;
+
+    ol[role="list"],
+    ul[role="list"] {
+      list-style-type: none;
+      padding-inline-start: var(--lliw-typography__line-height);
+    }
   }
 }

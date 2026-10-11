@@ -14,25 +14,27 @@
 */
 
 @scope(.lliw.small-print) {
-  --lliw-typography__font-size: round(up, 0.75rem, 1px);
-  --lliw-typography__rhythm-unit: round(up, 0.75rem, 1px);
-  --lliw-typography__line-height: round(up, 0.75rem, 1px);
+  :scope {
+    --lliw-typography__font-size: round(up, 0.75rem, 1px);
+    --lliw-typography__rhythm-unit: round(up, 0.75rem, 1px);
+    --lliw-typography__line-height: round(up, 0.75rem, 1px);
 
-  --lliw-typography__font--h1: 1000 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
-  --lliw-typography__font--h2: 900 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
-  --lliw-typography__font--h3: 800 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
-  --lliw-typography__font--h4: 700 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
-  --lliw-typography__font--h5: 600 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
-  --lliw-typography__font--h6: 500 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
+    --lliw-typography__font--h1: 1000 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
+    --lliw-typography__font--h2: 900 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
+    --lliw-typography__font--h3: 800 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
+    --lliw-typography__font--h4: 700 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
+    --lliw-typography__font--h5: 600 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
+    --lliw-typography__font--h6: 500 var(--lliw-typography__font-size)/var(--lliw-typography__line-height) var(--lliw-typography__font-family);
 
-  line-height: var(--lliw-typography__line-height);
+    line-height: var(--lliw-typography__line-height);
 
-  p {
-    font-size: var(--lliw-typography__font-size);
-    margin: 0;
+    p {
+      font-size: var(--lliw-typography__font-size);
+      margin: 0;
 
-    &+p {
-      text-indent: 1lh;
+      &+p {
+        text-indent: 1lh;
+      }
     }
   }
 }

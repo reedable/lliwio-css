@@ -1,6 +1,6 @@
 blockquote {
-  font-size: round(up, 1em * var(--lliw-1i), 1px);
-  margin-left: calc(2 * var(--lliw-typography__line-height));
+  font-size: round(up, 1rem * var(--lliw-1i), 1px);
+  margin-left: calc(var(--lliw-typography__line-height));
 
   p {
     margin: 0;

@@ -1,9 +1,11 @@
 @scope(.lliw.vertical-grid) {
-  --color: var(--lliw-semanticColor__neutral-8);
+  :scope {
+    --color: var(--lliw-semanticColor__neutral-8);
 
-  background-image: repeating-linear-gradient(to bottom,
-      var(--color) 0px,
-      var(--color) 1px,
-      transparent 1px,
-      transparent var(--lliw-typography__line-height));
+    background-image: repeating-linear-gradient(to bottom,
+        var(--color) 0px,
+        var(--color) 1px,
+        transparent 1px,
+        transparent var(--lliw-typography__line-height));
+  }
 }
