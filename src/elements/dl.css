@@ -1,13 +1,15 @@
-dl {
-  display: grid;
-  grid-gap: 0 1em;
-  grid-template-columns: max-content;
+@scope(dl) {
+  :scope {
+    display: grid;
+    grid-gap: 0 1em;
+    grid-template-columns: max-content;
 
-  dt {
-    font-weight: bold;
-  }
+    dt {
+      font-weight: bold;
+    }
 
-  dd {
-    grid-column-start: 2;
+    dd {
+      grid-column-start: 2;
+    }
   }
 }

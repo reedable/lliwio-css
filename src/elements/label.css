@@ -6,130 +6,133 @@
     <input placeholder>
   </label>
 */
-label {
-  --label__font-size: round(var(--lliw-typography__font-size) * var(--lliw-2i), 1px);
-  --label__line-height: round(var(--lliw-typography__line-height) * var(--lliw-2i), 1px);
-  --input__font-size: round(var(--lliw-typography__font-size) * var(--lliw-1), 1px);
-  --input__height: round(var(--lliw-typography__line-height) * var(--lliw-1), 1px);
-  --input__padding: 0.125rem;
-  --height: calc(2 * var(--lliw-typography__line-height));
-  --transition__duration: 300ms;
-  --border-width: 0.125rem;
+@scope(label) {
+  :scope {
+    --label__font-size: round(var(--lliw-typography__font-size) * var(--lliw-2i), 1px);
+    --label__line-height: round(var(--lliw-typography__line-height) * var(--lliw-2i), 1px);
+    --input__font-size: round(var(--lliw-typography__font-size) * var(--lliw-1), 1px);
+    --input__height: round(var(--lliw-typography__line-height) * var(--lliw-1), 1px);
+    --input__padding: 0.125rem;
+    --height: calc(2 * var(--lliw-typography__line-height));
+    --transition__duration: 300ms;
+    --border-width: 0.125rem;
 
-  /* background-color: var(--lliw-semanticColor__background-color--secondary); */
-  color: var(--lliw-semanticColor__color--primary);
-  display: block;
-  font-size: var(--label__font-size);
-  font-weight: 700;
-  height: var(--height);
-  line-height: var(--label__line-height);
-  overflow: hidden;
-  position: relative;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-
-  @media (prefers-reduced-motion: no-preference) {
-    transition: color var(--transition__duration) ease-in-out;
-  }
-
-  &+label {
-    margin-top: var(--lliw-typography__line-height);
-  }
-
-  /* Bottom border */
-
-  &::before {
-    background-color: var(--lliw-semanticColor__background-color--secondary);
-    border-bottom: var(--border-width) solid;
-    border-color: var(--lliw-semanticColor__color--secondary);
-    border-color: transparent;
-    bottom: 0;
-    content: '';
+    /* background-color: var(--lliw-semanticColor__background-color--secondary); */
+    color: var(--lliw-semanticColor__color--primary);
     display: block;
-    height: var(--input__height);
-    left: 0;
-    position: absolute;
+    font-size: var(--label__font-size);
+    font-weight: 700;
+    height: var(--height);
+    line-height: var(--label__line-height);
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     width: 100%;
 
     @media (prefers-reduced-motion: no-preference) {
-      transition:
-        border-color var(--transition__duration) ease-in-out;
+      transition: color var(--transition__duration) ease-in-out;
     }
-  }
 
-  @media (prefers-contrast: no-preference) {
-    &::after {
-      border-bottom: var(--border-width) solid var(--lliw-semanticColor__color--focus);
-      border-radius: var(--border-width);
-      bottom: 0;
-      content: '';
-      display: block;
-      left: 50%;
-      position: absolute;
-      width: 0;
-
-      @media (prefers-reduced-motion: no-preference) {
-        transition:
-          border-radius var(--transition__duration) ease-in,
-          left var(--transition__duration) ease-in-out,
-          width var(--transition__duration) ease-in-out;
-      }
+    &+label {
+      margin-top: var(--lliw-typography__line-height);
     }
-  }
 
-  &:focus-within {
+    /* Bottom border */
+
     &::before {
-      border-color: var(--lliw-semanticColor__color--focus);
-    }
-
-    &::after {
-      border-radius: 0;
+      background-color: var(--lliw-semanticColor__background-color--secondary);
+      border-bottom: var(--border-width) solid;
+      border-color: var(--lliw-semanticColor__color--secondary);
+      border-color: transparent;
       bottom: 0;
       content: '';
       display: block;
+      height: var(--input__height);
       left: 0;
       position: absolute;
       width: 100%;
-    }
-  }
 
-  /* Input */
-
-  input {
-    display: block;
-    font-size: var(--input__font-size);
-    height: var(--input__height);
-    margin-top: var(--label__line-height);
-    position: absolute;
-    padding: var(--input__padding);
-    bottom: 0;
-    width: 100%;
-
-    &:focus,
-    &:focus-visible {
-      outline: 0;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          border-color var(--transition__duration) ease-in-out;
+      }
     }
 
-    &::placeholder {
+    @media (prefers-contrast: no-preference) {
+      &::after {
+        border-bottom: var(--border-width) solid var(--lliw-semanticColor__color--focus);
+        border-radius: var(--border-width);
+        bottom: 0;
+        content: '';
+        display: block;
+        left: 50%;
+        position: absolute;
+        width: 0;
+
+        @media (prefers-reduced-motion: no-preference) {
+          transition:
+            border-radius var(--transition__duration) ease-in,
+            left var(--transition__duration) ease-in-out,
+            width var(--transition__duration) ease-in-out;
+        }
+      }
+    }
+
+    &:focus-within {
+      &::before {
+        border-color: var(--lliw-semanticColor__color--focus);
+      }
+
+      &::after {
+        border-radius: 0;
+        bottom: 0;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    /* Input */
+
+    input {
+      display: block;
+      font-size: var(--input__font-size);
+      height: var(--input__height);
+      margin-top: var(--label__line-height);
+      position: absolute;
+      padding: var(--input__padding);
+      bottom: 0;
+      width: 100%;
+
+      &:focus,
+      &:focus-visible {
+        outline: 0;
+      }
+
+      &::placeholder {
+        color: var(--lliw-semanticColor__color--secondary);
+        font-style: italic;
+        font-size: round(up, var(--lliw-typography__font-size) * var(--lliw-1i), 1px);
+      }
+    }
+
+    /*
+      WARNING
+
+      Helper text is intended to be short. If it exceeds one line, the vertical
+      rhythm may break.
+    */
+
+    &:has(input[aria-describedby])+[id] {
       color: var(--lliw-semanticColor__color--secondary);
-      font-style: italic;
-      font-size: round(up, var(--lliw-typography__font-size) * var(--lliw-1i), 1px);
+      font-size: round(up, 1rem * var(--lliw-2i), 1px);
+      font-weight: 300;
+      line-height: round(up, 1rem * var(--lliw-0), 1px);
+      min-height: var(--lliw-typography__line-height);
+      padding: 0 0 0 calc(2 * var(--input__padding, 0.125rem));
     }
-  }
-
-  /*
-    WARNING
-    Helper text is intended to be short. If it exceeds one line, the vertical
-    rhythm may break.
-  */
-
-  &:has(input[aria-describedby])+[id] {
-    color: var(--lliw-semanticColor__color--secondary);
-    font-size: round(up, 1rem * var(--lliw-2i), 1px);
-    font-weight: 300;
-    line-height: round(up, 1rem * var(--lliw-0), 1px);
-    min-height: var(--lliw-typography__line-height);
-    padding: 0 0 0 calc(2 * var(--input__padding, 0.125rem));
   }
 }

@@ -1,18 +1,20 @@
-blockquote {
-  font-size: round(up, 1rem * var(--lliw-1i), 1px);
-  margin-left: calc(var(--lliw-typography__line-height));
+@scope(blockquote) {
+  :scope {
+    font-size: round(up, 1rem * var(--lliw-1i), 1px);
+    margin-left: calc(var(--lliw-typography__line-height));
 
-  p {
-    margin: 0;
-  }
+    p {
+      margin: 0;
+    }
 
-  *+p {
-    text-indent: var(--lliw-typography__line-height);
-  }
+    *+p {
+      text-indent: var(--lliw-typography__line-height);
+    }
 
-  &[cite] {
-    &::after {
-      content: ' (' attr(cite) ')';
+    &[cite] {
+      &::after {
+        content: ' (' attr(cite) ')';
+      }
     }
   }
 }

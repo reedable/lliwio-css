@@ -1,8 +1,10 @@
-figure {
-  margin-left: var(--lliw-typography__line-height);
-  margin-right: var(--lliw-typography__line-height);
+@scope(figure) {
+  :scope {
+    margin-left: var(--lliw-typography__line-height);
+    margin-right: var(--lliw-typography__line-height);
 
-  figcaption {
-    display: block;
+    figcaption {
+      display: block;
+    }
   }
 }

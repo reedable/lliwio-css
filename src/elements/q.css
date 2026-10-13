@@ -1,8 +1,10 @@
 /*
   Inline quotations from external source, often accompanied by citations.
 */
-q[cite] {
-  &::after {
-    content: close-quote " (" attr(cite) ")";
+@scope(q[cite]) {
+  :scope {
+    &::after {
+      content: close-quote " (" attr(cite) ")";
+    }
   }
 }

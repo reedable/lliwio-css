@@ -1,14 +1,15 @@
-a {
-  color: var(--lliw-semanticColor__color--link);
-  font-family: inherit;
-  text-decoration-line: underline;
-  text-underline-offset: 0.25rem;
+@scope(a) {
+  :scope {
+    color: var(--lliw-semanticColor__color--link);
+    font-family: inherit;
+    text-decoration-line: underline;
+    text-underline-offset: 0.25rem;
 
-  &:visited {
-    color: var(--lliw-semanticColor__color--visited);
-  }
+    &:visited {
+      color: var(--lliw-semanticColor__color--visited);
+    }
 
-  /*
+    /*
     WARNING
 
     Disabled link in high constrast mode is visually indistinguishable from
@@ -27,16 +28,17 @@ a {
     If the .hc-only text is missing, the CSS will inject " (disabled link)"
     automatically as a fallback, but this content cannot be localized.
   */
-  &[aria-disabled="true"] {
-    color: var(--lliw-semanticColor__color--disabled);
-    pointer-events: none;
-    text-decoration-line: underline;
-    text-decoration-thickness: 0.5px;
+    &[aria-disabled="true"] {
+      color: var(--lliw-semanticColor__color--disabled);
+      pointer-events: none;
+      text-decoration-line: underline;
+      text-decoration-thickness: 0.5px;
 
-    @media (prefers-contrast: more) {
-      &:not(:has(.lliw.hc-only)) {
-        &::after {
-          content: " (disabled link)"
+      @media (prefers-contrast: more) {
+        &:not(:has(.lliw.hc-only)) {
+          &::after {
+            content: " (disabled link)"
+          }
         }
       }
     }

@@ -1,13 +1,15 @@
-fieldset {
-  border: 0;
-  min-width: 100%;
+@scope(fieldset) {
+  :scope {
+    border: 0;
+    min-width: 100%;
 
-  legend {
-    font: var(--lliw-typography__font--h6);
-    width: 100%;
-  }
+    legend {
+      font: var(--lliw-typography__font--h6);
+      width: 100%;
+    }
 
-  &+fieldset {
-    margin-top: round(2 * var(--lliw-typography__line-height), 1px);
+    &+fieldset {
+      margin-top: round(2 * var(--lliw-typography__line-height), 1px);
+    }
   }
 }

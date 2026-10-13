@@ -1,16 +1,18 @@
-input {
-  background-color: inherit;
-  border: 2px solid transparent;
-  font-size: var(--lliw-typography__font-size);
-  color: var(--lliw-semanticColor__color--primary);
+@scope(input) {
+  :scope {
+    background-color: inherit;
+    border: 2px solid transparent;
+    font-size: var;
+    color: var(--lliw-semanticColor__color--primary);
 
-  @media (prefers-contrast: more) {
-    border-color: var(--lliw-semanticColor__color--primary);
+    @media (prefers-contrast: more) {
+      border-color: var(--lliw-semanticColor__color--primary);
 
-    &:focus,
-    &:focus::placeholder {
-      background-color: var(--lliw-semanticColor__color--primary);
-      color: var(--lliw-semanticColor__background-color--primary);
+      &:focus,
+      &:focus::placeholder {
+        background-color: var(--lliw-semanticColor__color--primary);
+        color: var(--lliw-semanticColor__background-color--primary);
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
-pre {
-  overflow: auto;
+@scope(pre) {
+  :scope {
+    overflow: auto;
+  }
 }

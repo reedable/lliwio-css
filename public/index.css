@@ -25,18 +25,13 @@ body {
       /*
         Table of contents
 
-        Replace the ol margin-top with summary padding-bottom for
-        better transition.
+        Replace the ol margin-top with padding-top for better transition.
       */
       header+nav {
         margin-top: 1rlh;
 
-        summary {
+        details[open]>ol {
           padding-top: 1rlh;
-        }
-
-        ol {
-          margin: 0;
         }
       }
 

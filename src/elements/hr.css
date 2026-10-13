@@ -6,39 +6,41 @@
   https: //medium.com/web-dev-survey-from-kyoto/everything-about-hr-when-to-use-it-and-how-to-style-it-fd17b66573
 */
 
-hr {
-  border: 0;
-  color: var(--lliw-semanticColor__color--primary);
-  height: var(--lliw-typography__line-height);
-  margin: calc(1.5 * var(--lliw-typography__line-height)) auto;
-  width: 100%;
-
-  &:not([class])::before {
-    content: '* * *';
-    display: block;
-    font-family: monospace;
-    text-align: center;
+@scope(hr) {
+  :scope {
+    border: 0;
+    color: var(--lliw-semanticColor__color--primary);
+    height: var(--lliw-typography__line-height);
+    margin: calc(1.5 * var(--lliw-typography__line-height)) auto;
     width: 100%;
-  }
-}
 
-/*
+    &:not([class])::before {
+      content: '* * *';
+      display: block;
+      font-family: monospace;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  /*
   Asterism is an obsolete symbol for thematic break, mostly replaced by the
   three horizontal asterisks. Provided here for fun.
 */
 
-hr.lliw.asterism {
-  border: 0;
-  height: var(--lliw-typography__line-height);
-  margin: calc(1.5 * var(--lliw-typography__line-height)) auto;
-  width: 100%;
-
-  &::before {
-    content: '\2042';
-    display: block;
-    font-size: round(up, 1em * var(--lliw-4), 1px);
-    text-align: center;
+  hr.lliw.asterism {
+    border: 0;
+    height: var(--lliw-typography__line-height);
+    margin: calc(1.5 * var(--lliw-typography__line-height)) auto;
     width: 100%;
+
+    &::before {
+      content: '\2042';
+      display: block;
+      font-size: round(up, 1em * var(--lliw-4), 1px);
+      text-align: center;
+      width: 100%;
+    }
   }
 }
 
@@ -47,25 +49,27 @@ hr.lliw.asterism {
   symbol is not the same as use of <section> tags.
 */
 
-hr.lliw.section {
-  border: none;
-  border-left: 40px solid var(--lliw-semanticColor__color--primary);
-  border-right: 40px solid var(--lliw-semanticColor__color--primary);
-  height: 2px;
-  margin: calc(2 * var(--lliw-typography__line-height) - 1px) auto;
-  overflow: visible;
-  position: relative;
-  width: 100px;
+@scope(hr.lliw.section) {
+  :scope {
+    border: none;
+    border-left: 40px solid var(--lliw-semanticColor__color--primary);
+    border-right: 40px solid var(--lliw-semanticColor__color--primary);
+    height: 2px;
+    margin: calc(2 * var(--lliw-typography__line-height) - 1px) auto;
+    overflow: visible;
+    position: relative;
+    width: 100px;
 
-  &::before {
-    content: '\00A7';
-    display: block;
-    font-size: round(up, 1em * var(--lliw-2), 1px);
-    font-weight: 300;
-    line-height: var(--lliw-typography__line-height);
-    position: absolute;
-    text-align: center;
-    top: round(-0.5 * var(--lliw-typography__line-height), 1px);
-    width: 100%;
+    &::before {
+      content: '\00A7';
+      display: block;
+      font-size: round(up, 1em * var(--lliw-2), 1px);
+      font-weight: 300;
+      line-height: var(--lliw-typography__line-height);
+      position: absolute;
+      text-align: center;
+      top: round(-0.5 * var(--lliw-typography__line-height), 1px);
+      width: 100%;
+    }
   }
 }

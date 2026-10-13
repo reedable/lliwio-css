@@ -1,4 +1,6 @@
-p {
-  /* Leading quoatation marks are pulled out to left if supported by the browser */
-  hanging-punctuation: first;
+@scope(p) {
+  :scope {
+    /* Leading quoatation marks are pulled out to left if supported by the browser */
+    hanging-punctuation: first;
+  }
 }

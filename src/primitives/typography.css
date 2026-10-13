@@ -26,106 +26,124 @@
   line-height: var(--lliw-typography__line-height);
 }
 
-body {
-  /*
-    Default font set at <body> level, so that all elements that inherit from
-    <body>, such as <p>, <q>, <dt>, <dd>, etc, automatically inehrit this style.
-  */
-  font-family: var(--lliw-typography__font-family);
-  font-size: var(--lliw-typography__font-size);
+@scope(body) {
+  :scope {
+    /*
+      Default font set at <body> level, so that all elements that inherit from
+      <body>, such as <p>, <q>, <dt>, <dd>, etc, automatically inehrit this style.
+    */
+    font-family: var(--lliw-typography__font-family);
+    font-size: var(--lliw-typography__font-size);
+  }
 }
 
-.lliw.sans-serif {
-  font-family: var(--lliw-typography__font-family--sans-serif);
+@scope(.lliw.sans-serif) {
+  :scope {
+    font-family: var(--lliw-typography__font-family--sans-serif);
+  }
 }
 
-.lliw.serif {
-  font-family: var(--lliw-typography__font-family--serif);
+@scope(.lliw.serif) {
+  :scope {
+    font-family: var(--lliw-typography__font-family--serif);
+  }
 }
 
-code,
-samp,
-.lliw.monospace {
-  font-family: var(--lliw-typography__font-family--monospace);
+@scope(:is(code, samp, .lliw.monospace)) {
+  :scope {
+    font-family: var(--lliw-typography__font-family--monospace);
 
-  /* Compensate for rendering engine quirks */
-  font-size: 0.9375em;
-  vertical-align: top;
+    /* Compensate for rendering engine quirks */
+    font-size: 0.9375em;
+    vertical-align: top;
+  }
 }
 
 /* Headings */
 
-h1 {
-  font: var(--lliw-typography__font--h1);
+@scope(h1) {
+  :scope {
+    font: var(--lliw-typography__font--h1);
+  }
 }
 
-h2 {
-  font: var(--lliw-typography__font--h2);
+@scope(h2) {
+  :scope {
+    font: var(--lliw-typography__font--h2);
+  }
 }
 
-h3 {
-  font: var(--lliw-typography__font--h3);
+@scope(h3) {
+  :scope {
+    font: var(--lliw-typography__font--h3);
+  }
 }
 
-h4 {
-  font: var(--lliw-typography__font--h4);
+@scope(h4) {
+  :scope {
+    font: var(--lliw-typography__font--h4);
+  }
 }
 
-h5 {
-  font: var(--lliw-typography__font--h5);
+@scope(h5) {
+  :scope {
+    font: var(--lliw-typography__font--h5);
+  }
 }
 
-h6 {
-  font: var(--lliw-typography__font--h6);
+@scope(h6) {
+  :scope {
+    font: var(--lliw-typography__font--h6);
+  }
 }
 
 /* Vertical rhythm */
 
-main,
-article {
+@scope(:is(main, article)) {
+  :scope {
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  pre,
-  table,
-  figure,
-  details {
-    color: var(--lliw-semanticColor__color--primary);
-    line-height: var(--lliw-typography__line-height);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    ol,
+    ul,
+    table,
+    figure,
+    details {
+      color: var(--lliw-semanticColor__color--primary);
+      line-height: var(--lliw-typography__line-height);
 
-    &+h1,
-    &+h2,
-    &+h3,
-    &+h4,
-    &+h5,
-    &+h6 {
-      margin-top: round(up, 2em, var(--lliw-typography__line-height));
-    }
+      &+h1,
+      &+h2,
+      &+h3,
+      &+h4,
+      &+h5,
+      &+h6 {
+        margin-top: round(up, 2em, var(--lliw-typography__line-height));
+      }
 
-    &+p,
-    &+pre,
-    &+blockquote,
-    &+table,
-    &+figure {
-      margin-top: round(1em, var(--lliw-typography__line-height));
+      &+p,
+      &+pre,
+      &+blockquote,
+      &+ol,
+      &+ul,
+      &+table,
+      &+figure {
+        margin-top: round(1em, var(--lliw-typography__line-height));
+      }
     }
   }
 }
 
 /* Lists */
-ol,
-ul {
-  margin-top: round(1em, var(--lliw-typography__line-height));
-  padding-inline-start: 1lh;
-
-  li>ol,
-  li>ul {
-    margin-top: 0;
+@scope(:is(ol, ul)) {
+  :scope {
+    padding-inline-start: 1lh;
   }
 }
