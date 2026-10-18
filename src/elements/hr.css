@@ -21,25 +21,25 @@
       text-align: center;
       width: 100%;
     }
-  }
 
-  /*
-  Asterism is an obsolete symbol for thematic break, mostly replaced by the
-  three horizontal asterisks. Provided here for fun.
-*/
+    /*
+      Asterism is an obsolete symbol for thematic break, mostly replaced by the
+      three horizontal asterisks. Provided here for fun.
+    */
 
-  hr.lliw.asterism {
-    border: 0;
-    height: var(--lliw-typography__line-height);
-    margin: calc(1.5 * var(--lliw-typography__line-height)) auto;
-    width: 100%;
-
-    &::before {
-      content: '\2042';
-      display: block;
-      font-size: round(up, 1em * var(--lliw-4), 1px);
-      text-align: center;
+    &.lliw.asterism {
+      border: 0;
+      height: var(--lliw-typography__line-height);
+      margin: calc(1.5 * var(--lliw-typography__line-height)) auto;
       width: 100%;
+
+      &::before {
+        content: '\2042';
+        display: block;
+        font-size: round(up, 1em * var(--lliw-4), 1px);
+        text-align: center;
+        width: 100%;
+      }
     }
   }
 }

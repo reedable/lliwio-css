@@ -4,6 +4,23 @@
 
 /* lliw site styling */
 
+@keyframes header__h1--scale {
+  to {
+    background-color: var(--lliw-semanticColor__background-color--primary);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: round(1em, 1rlh);
+  }
+}
+
+@keyframes header__p--scale {
+  to {
+    background-color: var(--lliw-semanticColor__background-color--primary);
+    font-size: 0;
+    line-height: round(1em, 1rlh);
+  }
+}
+
 body {
   overflow: scroll;
 
@@ -19,7 +36,23 @@ body {
       width: 100%;
 
       header {
-        margin-top: 1rlh;
+        /* background-color: var(--lliw-semanticColor__background-color--primary); */
+        position: sticky;
+        top: 0;
+
+        h1 {
+          animation-name: header__h1--scale;
+          animation-timeline: scroll(nearest);
+          animation-fill-mode: both;
+          animation-range: 0px 300px;
+        }
+
+        p {
+          animation-name: header__p--scale;
+          animation-timeline: scroll(nearest);
+          animation-fill-mode: both;
+          animation-range: 0px 300px;
+        }
       }
 
       /*
