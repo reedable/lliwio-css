@@ -1,6 +1,6 @@
 {
   "name": "@reedable/lliwio-css",
-  "version": "0.0.2-dev",
+  "version": "0.0.2",
   "description": "Reader and interface styles shared by Reedable applications",
   "files": [
     "src"
