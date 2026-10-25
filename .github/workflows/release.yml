@@ -1,0 +1,74 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Package release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Verify tag and package version
+        shell: bash
+        run: |
+          release_doc="README.md#tagging-a-release"
+
+          if [[ ! "$GITHUB_REF_NAME" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-rc\.[1-9][0-9]*)?$ ]]; then
+            echo "::error::Release tag must be final (v0.1.0) or a numbered release candidate (v0.1.0-rc.1); got $GITHUB_REF_NAME. See $release_doc."
+            exit 1
+          fi
+
+          tag_version="${GITHUB_REF_NAME#v}"
+          package_version="$(node -p "require('./package.json').version")"
+
+          if [[ "$tag_version" != "$package_version" ]]; then
+            echo "::error::Tag version ($tag_version) does not match package version ($package_version). See $release_doc."
+            exit 1
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Test release scripts
+        run: npm test
+
+      - name: Pack release asset
+        shell: bash
+        run: |
+          mkdir -p dist
+          npm pack --pack-destination dist
+          test "$(find dist -maxdepth 1 -name '*.tgz' | wc -l | tr -d ' ')" = "1"
+
+      - name: Create draft release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/*.tgz --clobber
+          else
+            prerelease_args=()
+            if [[ "$GITHUB_REF_NAME" == *-rc.* ]]; then
+              prerelease_args+=(--prerelease)
+            fi
+            gh release create "$GITHUB_REF_NAME" dist/*.tgz \
+              --draft \
+              --generate-notes \
+              --title "lliwio-css $GITHUB_REF_NAME" \
+              "${prerelease_args[@]}"
+          fi
