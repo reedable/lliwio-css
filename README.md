@@ -69,7 +69,26 @@ For the initial `0.1.0` release, commit all intended files first, run
 Pushing a valid `v<version>` tag starts the Release workflow. It checks that
 the tag matches `package.json`, builds the `.tgz`, and creates a draft GitHub
 Release. An `-rc.N` tag creates a prerelease; a final tag creates a regular
-release. Inspect the draft and its package asset before publishing it.
+release.
+
+After the workflow succeeds, publish the draft that the workflow created:
+
+1. Open the repository's **Releases** page.
+2. Find the release marked **Draft** with the version you just tagged.
+3. Open that existing draft by clicking its title. **Do not click “Draft a new
+   release.”** Doing so creates a second, empty release for the same tag.
+4. Verify the tag and the attached `reedable-lliwio-css-<version>.tgz` file.
+   GitHub also lists two automatic source-code archives, so three assets total
+   is expected.
+5. Click the **pencil icon in the upper-right corner** of the release card.
+   GitHub uses this unlabeled edit control to reach the publishing form.
+6. For an `-rc.N` version, verify **Set as a pre-release** is selected. For a
+   final version, verify it is not selected.
+7. Scroll to the bottom and click **Publish release**.
+
+The package is not available at its permanent release URL until the draft is
+published. Publishing the workflow-created draft is the only manual GitHub
+step; do not create another release yourself.
 
 The workflow rejects malformed, `-dev`, zero-numbered RC, and mismatched tags.
 It packages only files admitted by the `files` field.
