@@ -9,7 +9,7 @@ Each GitHub Release includes an npm package tarball. Consumers pin the exact rel
 ```json
 {
   "dependencies": {
-    "@reedable/lliwio-css": "https://github.com/reedable/lliwio-css/releases/download/v0.1.0/reedable-lliwio-css-0.1.0.tgz"
+    "@reedable/lliwio-css": "https://github.com/reedable/lliwio-css/releases/download/v0.0.4/reedable-lliwio-css-0.0.4.tgz"
   }
 }
 ```
@@ -19,6 +19,20 @@ Vite consumers can inline the stylesheet:
 ```ts
 import readerCss from "@reedable/lliwio-css/index.css?inline";
 ```
+
+To use only the color custom properties, import the standalone stylesheets:
+
+```ts
+import "@reedable/lliwio-css/colors.css";
+import "@reedable/lliwio-css/semanticColors.css";
+```
+
+`colors.css` defines the brand colors and grayscale. `semanticColors.css`
+defines neutral, foreground, background, browser, and status colors, including
+dark-mode overrides. Semantic colors depend on the custom properties in
+`colors.css`, so import both when using semantic colors. These standalone
+exports contain only custom properties and do not apply resets, typography,
+element styles, or layout rules. Both also support Vite's `?inline` suffix.
 
 ## Version lifecycle
 

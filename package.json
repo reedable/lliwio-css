@@ -1,6 +1,6 @@
 {
   "name": "@reedable/lliwio-css",
-  "version": "0.0.4-dev",
+  "version": "0.0.4",
   "description": "Reader and interface styles shared by Reedable applications",
   "files": [
     "src"
@@ -9,7 +9,9 @@
     "**/*.css"
   ],
   "exports": {
-    "./index.css": "./src/index.css"
+    "./index.css": "./src/index.css",
+    "./colors.css": "./src/primitives/color.css",
+    "./semanticColors.css": "./src/primitives/semanticColor.css"
   },
   "scripts": {
     "test": "node --test scripts/*.test.mjs",
