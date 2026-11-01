@@ -1,7 +1,7 @@
 @scope(blockquote) {
   :scope {
-    font-size: round(up, 1rem * var(--lliw-1i), 1px);
-    margin-left: calc(var(--lliw-typography__line-height));
+    font-size: 1rem;
+    margin-left: calc(var(--lliw-typography__line-height) * 2);
 
     p {
       margin: 0;
